@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>it.freedomotic.razberry</groupId>
+    <artifactId>Razberry</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+    <name>Razberry API Java Client Library</name>
+    <description>Client Library to connect with the Razberry api</description>
+    <inceptionYear>2013</inceptionYear>
+    <url>https://github.com/gpulido/razberry-java-client-library</url>
+    <!--<licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>-->
+
+    <build>
+        <plugins>
+            <plugin>
+                <version>3.0</version>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>buildnumber-maven-plugin</artifactId>
+                <version>1.2</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>create</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <doCheck>true</doCheck>
+                    <doUpdate>false</doUpdate>
+                    <format>{0,number}</format>
+                    <items>
+                        <item>buildNumber</item>
+                    </items>
+                    <!--<revisionOnScmFailure> </revisionOnScmFailure>       -->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.mycila.maven-license-plugin</groupId>
+                <artifactId>maven-license-plugin</artifactId>
+                <configuration>
+                    <header>src/LICENSE_HEADER.txt</header>
+                    <properties>
+                        <name>${project.name}</name>
+                        <year>${project.inceptionYear}</year>
+                        <holder>Gabriel Pulido</holder>
+                        <contact>gabriel@freedomotic.com</contact>
+                    </properties>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>format</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+        <finalName>
+            ${project.artifactId}-${project.version}.${buildNumber}
+        </finalName>
+    </build>
+    <repositories>
+        <repository>
+            <id>maven-restlet</id>
+            <name>Public online Restlet repository</name>
+            <url>http://maven.restlet.org</url>
+        </repository>
+    </repositories>
+    <dependencies>
+        <!--  Gson: Java to Json conversion -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.2.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.restlet.jse</groupId>
+            <artifactId>org.restlet</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.restlet.jse</groupId>
+            <artifactId>org.restlet.ext.json</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+    </dependencies>
+    <scm>
+        <connection>scm:git:git@github.com:gpulido/razberry-java-client-library.git</connection>
+        <developerConnection>scm:git:git@github.com:gpulido/razberry-java-client-library.git</developerConnection>
+        <url>scm:git:git@github.com:gpulido/razberry-java-client-library.git</url>
+    </scm>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>mc-release</id>
+            <name>Local Maven repository of releases</name>
+            <url>http://mc-repo.googlecode.com/svn/maven2/releases</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
+    
+</project>

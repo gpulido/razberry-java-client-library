@@ -1,8 +1,8 @@
 Razberry-java-client-library
 ============================
-Razberry-java-client-library is a Razberry / Zway API binding library for the Java language licensed under Apache License 2.0.
+Razberry-java-client-library is a Razberry / Z-Way API binding library for the Java language licensed under Apache License 2.0.
 
-This library is a wrapper over the Zway REST api.
+This library is a wrapper over the Z-Way REST api (http://razberry.z-wave.me/docs/zway.pdf).
 
 The Razberry-java-client-library depends on three opensource libraries:
 

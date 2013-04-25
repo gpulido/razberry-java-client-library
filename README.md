@@ -8,6 +8,6 @@ The Razberry-java-client-library depends on three opensource libraries:
 
 restlet - www.restlet.org - for the http and REST comunication
 
-json - You can see the license term at http://www.JSON.org/license.html
+internal.json - You can see the license term at http://www.JSON.org/license.html
 
-gson - http://code.google.com/p/google-gson/ To transform the json string onto java objects
+gson - http://code.google.com/p/google-gson/ To transform the internal.json string onto java objects

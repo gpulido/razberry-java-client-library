@@ -119,6 +119,11 @@
             <artifactId>org.restlet.ext.json</artifactId>
             <version>2.1.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>14.0.1</version>
+        </dependency>
     </dependencies>
     <scm>
         <connection>scm:git:git@github.com:gpulido/razberry-java-client-library.git</connection>

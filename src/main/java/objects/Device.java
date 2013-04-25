@@ -10,13 +10,13 @@ public class Device
   Boolean isVirtual;
   Boolean isListening;
   Boolean isRouting;
-  Boolean isAwake";
+  Boolean isAwake;
   Boolean optional;
   Boolean isFailed;
   Boolean beam;
   Boolean sensor250;
   Boolean sensor1000;
-  String neighbours; // NOTE in json it's "binary" - array of integer
+  String neighbours; // NOTE in internal.json it's "binary" - array of integer
   Integer manufacturerId;
   String vendorString;
   Integer manufacturerProductType;
@@ -27,7 +27,7 @@ public class Device
   String SDK;
   Integer applicationMajor;
   Integer applicationMinor;
-  String nodeInfoFrame; // NOTE in json it's "binary type" e.g. values [ 114, 96, 134, 143, 38, 152, 119, 32 ]
+  String nodeInfoFrame; // NOTE in internal.json it's "binary type" e.g. values [ 114, 96, 134, 143, 38, 152, 119, 32 ]
   String ZDDXML;
   String ZDDXMLLang;
   String ZDDXMLFile;
@@ -37,7 +37,7 @@ public class Device
   Integer countSuccess;
   Integer countFailed;
   Integer queueLength;
-  String networkKey; // NOTE in json it's "binary type" e.g. values [ 114, 96, 134, 143, 38, 152, 119, 32 ]
+  String networkKey; // NOTE in internal.json it's "binary type" e.g. values [ 114, 96, 134, 143, 38, 152, 119, 32 ]
   Integer secureControllerId;
 
 }

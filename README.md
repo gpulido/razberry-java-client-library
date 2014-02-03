@@ -11,3 +11,5 @@ restlet - www.restlet.org - for the http and REST comunication
 internal.json - You can see the license term at http://www.JSON.org/license.html
 
 gson - http://code.google.com/p/google-gson/ To transform the internal.json string onto java objects
+
+NOTE: NOT BEING DEVELOPED AT THE MOMENT
